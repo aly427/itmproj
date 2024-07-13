@@ -1,0 +1,31 @@
+{%extends "core/base.html"%}
+
+{%block title%}
+Flashcard #
+{%endblock%}
+
+{%block content%}
+    <h1>{{collections.name}}</h1>
+    <form method = "post" action = "#">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type = "submit", userinput ="newStack"> Upload</button>
+    </form> 
+
+    <p>
+        user should not be able to go back here after submitting information
+        <br><a href="/">Back to home page</a>
+
+    
+    </p>   
+    Stack content:
+    <ul>
+        {%for stack in collections.stack_set.all%}
+
+            <li> <a href="/{{collections.name}}/{{stack.id}}">text: {{stack.text}}, id: {{stack.id}} </a> </li>
+
+
+        {%endfor%}
+    </ul>
+
+{%endblock%}

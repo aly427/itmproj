@@ -1,0 +1,165 @@
+/* Font styles */
+.righteous-regular {
+    font-family: "Righteous", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    font-size: 300%;
+    text-transform: uppercase;
+}
+
+.dm-sans-normal {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.dm-sans-bold {
+    font-family: "DM Sans", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1.5em;
+}
+
+/* General styles */
+body {
+    background-color: #F2F2F2;
+    font-family: "DM Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.home-image {
+    display: block;
+    margin: 0 auto;
+    width: 80%; /* 20% smaller */
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.collection-item {
+    background-color: #43C466;
+    border: 2px solid #101011;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.collection-item:nth-child(4n+2) {
+    background-color: #399BE6;
+}
+
+.collection-item:nth-child(4n+3) {
+    background-color: #FBBE28;
+}
+
+.collection-item:nth-child(4n+4) {
+    background-color: #FF5757;
+}
+
+.create-button {
+    display: block;
+    text-align: center;
+    font-size: 1.5em; /* Same as h3 */
+    margin: 20px auto;
+    background-color: #d5fbe0;
+    border: 2px solid #101011;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    text-decoration: none; /* Removed underline for buttons */
+    border-radius: 5px;
+    max-width: 300px; /* Adjust the width as needed */
+}
+
+.create-button:hover {
+    background-color: #43C466; /* Green background on hover */
+}
+
+.create-button a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.collection-item a {
+    color: black;
+    text-decoration: underline;
+}
+
+/* Styles for Create Flashcards Page */
+.create-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px; /* Adjust margin as needed */
+
+}
+
+.left-section {
+    flex: 1;
+    text-align: center;
+}
+
+.fc-generator-image {
+    width: 120%; /* Adjust image size as needed */
+}
+
+.right-section {
+    flex: 1;
+    text-align: center;
+}
+
+.create-form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-control {
+    width: 65%;
+    padding: 10px;
+    border: 2px solid #101011;
+    background-color: #FFFFFF; /* White background */
+    color: #000000; /* Black text */
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.upload-button {
+    background-color: #FBBE28; /* Yellow background */
+    color: #000000; /* Black text */
+    border: 2px solid #101011;
+    padding: 10px 20px;
+    text-decoration: underline;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition */
+    font-size: 1em;
+}
+
+.upload-button:hover {
+    background-color: #43C466; /* Green background on hover */
+}
+
+.home-link {
+    position: fixed;
+    top: 30px; 
+    right: 30px; 
+}
+
+.home-icon {
+    width: 50px; /* Adjust width as needed */
+    height: auto; /* Maintain aspect ratio */
+}

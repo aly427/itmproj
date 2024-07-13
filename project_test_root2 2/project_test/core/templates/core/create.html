@@ -1,0 +1,46 @@
+{% extends "core/base.html" %}
+
+{% block title %} 
+    New Collection
+{% endblock %}    
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Collection</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display+SC&family=Righteous&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="create-container">
+        <div class="left-section">
+            <img src="{% static 'images/fcgenerator.png' %}" alt="FC Generator Image" class="fc-generator-image">
+        </div>
+        <div class="right-section">
+            <h1 class="righteous-regular">Flashcard Generator</h1>
+            <div class="create-form">
+                <h3 class="dm-sans-bold">Flashcard Collection Name:</h3>
+                <form method="post" action="/create/">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <input type="text" name="collectionname" class="form-control" placeholder="Enter collection name">
+                    </div>
+                    <button type="submit" class="upload-button">Upload</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <a href="/" class="home-link">
+        <img src="{% static 'images/home.png' %}" alt="Home Icon" class="home-icon">
+    </a>
+
+</body>
+</html>
+{% endblock %}
